@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+    background: linear-gradient(135deg, #1e1e2f, #111);
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+
+    position: relative;
+
+    z-index: 10;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(20px);
+
+    background:
+        rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 50px
+        rgba(0,0,0,0.35);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.description {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.input-area button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #00c853;
+    color: white;
+    font-size: 16px;
+}
+
+.task {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.task:hover {
+    transform: scale(1.02);
+}
+
+.task-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.score-area {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.score-box {
+    flex: 1;
+}
+
+.score-box input {
+    width: 100%;
+}
+
+.weight-score {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffd54f;
+}
+
+.timer-panel {
+    margin-top: 50px;
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.timer-display {
+    font-size: 60px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.timer-buttons button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.start-btn {
+    background: #00c853;
+    color: white;
+}
+
+.pause-btn {
+    background: #ff9800;
+    color: white;
+}
+
+.end-btn {
+    background: #f44336;
+    color: white;
+}
+
+.completed {
+    animation: dissolve 2.5s forwards;
+}
+
+@keyframes dissolve {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0px);
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+
+    60% {
+        opacity: 0.6;
+        filter: blur(5px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+        filter: blur(20px);
+    }
+}
+
+#fireworksCanvas {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    will-change: transform;
+}
