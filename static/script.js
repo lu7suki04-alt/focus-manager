@@ -117,8 +117,8 @@ function addTask() {
         Number(importantInput.value);
 
     const score =
-        urgent * 0.4 +
-        important * 0.6;
+        urgent * 0.6 +
+        important * 0.4;
 
     const task = {
 
